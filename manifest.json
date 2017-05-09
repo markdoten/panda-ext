@@ -1,0 +1,12 @@
+{
+  "name": "Pandora Extension",
+  "version": "1.0",
+  "description": "Chrome extension for Pandora.com to make it more usable.",
+  "content_scripts": [
+    {
+      "matches": ["http://pandora.com/*"], 
+      "js": [],
+      "css" : []
+    }
+  ]
+}
