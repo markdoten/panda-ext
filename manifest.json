@@ -1,12 +1,13 @@
 {
+  "manifest_version": 2,
   "name": "Pandora Extension",
   "version": "1.0",
   "description": "Chrome extension for Pandora.com to make it more usable.",
   "content_scripts": [
     {
-      "matches": ["http://pandora.com/*"], 
-      "js": [],
-      "css" : []
+      "matches": ["https://www.pandora.com/*"], 
+      "js": ["dist/main.js"],
+      "css" : ["dist/main.css"]
     }
   ]
 }

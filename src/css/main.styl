@@ -1,0 +1,45 @@
+.region-main
+  .NowPlaying__aboveFold
+    .Nugget
+      display none !important
+
+  .NowPlaying__belowFold
+    display none !important
+
+.region-bottomBar
+  min-width inherit !important
+
+  .Tuner__VolumeDurationControl
+    bottom inherit !important
+    left 50% !important
+    position absolute !important
+    right inherit !important
+    top -60px !important
+
+    .VolumeDurationControl
+      left -50% !important
+      position relative !important
+      text-align center !important
+
+      .Duration
+        font-size 18px !important
+        height inherit !important
+        right inherit !important
+
+      .VolumeSlider
+        opacity 1 !important
+        right inherit !important
+        width inherit !important
+
+      .VolumeDurationControl__VolumeIconContainer
+        left -25px !important
+        top 25px !important
+
+      &:hover
+        .Duration
+          right inherit !important
+          -webkit-transition none !important
+          transition none !important
+
+      > div
+        position relative !important
