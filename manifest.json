@@ -6,8 +6,8 @@
   "content_scripts": [
     {
       "matches": ["https://www.pandora.com/*"], 
-      "js": ["dist/main.js"],
-      "css" : ["dist/main.css"]
+      "js": ["main.js"],
+      "css" : ["main.css"]
     }
   ]
 }
