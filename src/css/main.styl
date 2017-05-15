@@ -1,60 +1,106 @@
 body
   min-width inherit !important
 
-.region-main
-  min-width inherit !important
-
-  .NowPlaying__menu
+.App
+  .region-searchModal
     display none
 
-  .NowPlaying__aboveFold
-    .nowPlayingTopInfo__current
-      left 30% !important
-      max-width inherit !important
-      -webkit-transform translate3d(-30vw,0,0) !important
-      transform translate3d(-30vw,0,0) !important
-      width 75vw !important
+  .region-topBar
+    min-width inherit !important
 
-    .Nugget
+    .Nav__searchBox
+      display none
+
+    .Nav__secondaryMenu
+      width inherit !important
+
+  .region-main
+    min-width inherit !important
+
+    .NowPlaying__menu
+      display none
+
+    .NowPlaying__aboveFold
+      .nowPlayingTopInfo__current
+        left 30% !important
+        max-width inherit !important
+        -webkit-transform translate3d(-30vw,0,0) !important
+        transform translate3d(-30vw,0,0) !important
+        width 75vw !important
+
+      .Nugget
+        display none !important
+
+    .NowPlaying__belowFold
       display none !important
 
-  .NowPlaying__belowFold
-    display none !important
+  .region-bottomBar
+    min-width inherit !important
 
-.region-bottomBar
-  min-width inherit !important
+    .Tuner__VolumeDurationControl
+      bottom inherit !important
+      left 50% !important
+      position absolute !important
+      right inherit !important
+      top -60px !important
 
-  .Tuner__VolumeDurationControl
-    bottom inherit !important
-    left 50% !important
-    position absolute !important
-    right inherit !important
-    top -60px !important
-
-    .VolumeDurationControl
-      left -50% !important
-      position relative !important
-      text-align center !important
-
-      .Duration
-        font-size 18px !important
-        height inherit !important
-        right inherit !important
-
-      .VolumeSlider
-        opacity 1 !important
-        right inherit !important
-        width inherit !important
-
-      .VolumeDurationControl__VolumeIconContainer
-        left -25px !important
-        top 25px !important
-
-      &:hover
-        .Duration
-          right inherit !important
-          -webkit-transition none !important
-          transition none !important
-
-      > div
+      .VolumeDurationControl
+        left -50% !important
         position relative !important
+        text-align center !important
+
+        .Duration
+          font-size 18px !important
+          height inherit !important
+          right inherit !important
+
+        .VolumeSlider
+          opacity 1 !important
+          right inherit !important
+          width inherit !important
+
+        .VolumeDurationControl__VolumeIconContainer
+          left -25px !important
+          top 25px !important
+
+        &:hover
+          .Duration
+            right inherit !important
+            -webkit-transition none !important
+            transition none !important
+
+        > div
+          position relative !important
+
+  &.StationsMenuVisible
+    .region-searchModal
+      display block
+      left 50%
+      top 42px
+
+      &.SearchModal--focus
+        left inherit
+        top 0
+
+    .region-main
+      .NowPlaying__aboveFold
+        opacity .3
+        -webkit-transition: opacity .35s ease-in-out;
+        transition: opacity .35s ease-in-out;
+
+        .tarp
+          height 100vw
+          position absolute
+          top 0
+          width 100vw
+          z-index 101
+
+      .NowPlaying__menu
+        background rgba(0,0,0,0.2)
+        display block
+        padding 20px
+        z-index 102
+
+        .StationListItem__content,
+        .StationListItem__img
+          opacity 1 !important

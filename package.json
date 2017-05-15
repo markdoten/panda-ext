@@ -8,11 +8,14 @@
     "babelify": "^7.3.0",
     "browserify": "^14.3.0",
     "lodash": "^4.17.4",
+    "mdlint": "git@github.com:markdoten/mdlint.git",
     "stylus": "^0.54.5"
   },
   "scripts": {
-    "build": "mkdir -p dist && npm run css && npm run js && cp manifest.json dist/",
+    "build": "npm run lint && npm run dist && npm run css && npm run js",
     "css": "./node_modules/.bin/stylus src/css/main.styl -o dist/main.css",
-    "js": "./node_modules/.bin/browserify src/js/main.js -o dist/main.js -t [ babelify --presets [ es2015 ] ]"
+    "dist": "mkdir -p dist && cp manifest.json dist/",
+    "js": "./node_modules/.bin/browserify src/js/main.js -o dist/main.js -t [ babelify --presets [ es2015 ] ]",
+    "lint": "./node_modules/.bin/mdlint"
   }
 }
